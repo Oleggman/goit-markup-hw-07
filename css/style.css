@@ -176,11 +176,12 @@ img {
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
+  text-align: center;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 768px) {
   .item-title {
-    text-align: center;
+    text-align: left;
   }
 }
 
@@ -219,21 +220,21 @@ img {
 }
 
 .main-nav {
-  display: flex;
-  align-items: center;
+  display: none;
 }
 
 .address {
-  display: flex;
+  display: none;
   margin-left: auto;
 
   font-style: normal;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 768px) {
   .main-nav,
   .address {
-    display: none;
+    display: flex;
+    align-items: center;
   }
 }
 
@@ -298,7 +299,6 @@ img {
 */
 
 .hero {
-  /* max-width: 1440px; */
   max-width: 428px;
   height: 432px;
   margin-left: auto;
@@ -773,10 +773,10 @@ img {
 .modal {
   position: absolute;
   min-height: 576px;
-  width: 408px;
+  width: 392px;
   top: 50%;
   left: 50%;
-  padding: 72px 24px 24px;
+  padding: 72px 16px 24px;
 
   transform: translate(-50%, -50%) scale(1);
 
@@ -785,6 +785,14 @@ img {
   transition: transform var(--anim-time) var(--anim-timing-func);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+}
+
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 408px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
 }
 
 .backdrop.is-hidden {
@@ -1075,9 +1083,6 @@ img {
 .header .menu-toggle {
   min-height: 40px;
   min-width: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
   margin: 0;
   margin-left: auto;
@@ -1090,7 +1095,7 @@ img {
 }
 
 @media screen and (min-width: 768px) {
-  .menu-toggle {
+  .header .menu-toggle {
     display: none;
   }
 }
