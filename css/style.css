@@ -733,6 +733,11 @@ img {
   border-radius: 4px;
 }
 
+.subscription-form-input,
+.modal-form-input {
+  transition: border-color var(--anim-time) var(--anim-timing-func);
+}
+
 .subscription-form-input::placeholder {
   color: var(--white-color);
 }
@@ -741,6 +746,36 @@ img {
 .modal-form-input:focus-within,
 .modal-form-field .message-input:focus-within {
   outline: none;
+}
+
+.subscription-form-input:not(:placeholder-shown):valid,
+.modal-form-input:not(:placeholder-shown):valid {
+  border-color: green;
+}
+
+.subscription-form-input:not(:placeholder-shown):invalid,
+.modal-form-input:not(:placeholder-shown):invalid {
+  border-color: red;
+}
+
+.subscription-form-label {
+  position: relative;
+}
+
+.subscription-form-tag {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+
+  background-color: var(--secondary-color);
+
+  transform: translateY(0);
+  transition: transform var(--anim-time) var(--anim-timing-func);
+}
+
+.subscription-form-input:not(:placeholder-shown) + .subscription-form-tag,
+.subscription-form-input:focus + .subscription-form-tag {
+  transform: translateY(-85%);
 }
 
 .footer-submit-btn {
@@ -781,10 +816,11 @@ img {
 .modal {
   position: absolute;
   min-height: 576px;
+  width: 100%;
   max-width: 392px;
   padding: 72px 16px 24px;
 
-  transform: scale(1);
+  transform: translateY(0%) scale(1);
 
   background-color: var(--modal-bg-color);
 
@@ -808,7 +844,7 @@ img {
 }
 
 .backdrop.is-hidden .modal {
-  transform: translate(-50%, 50%);
+  transform: translateY(50%);
 }
 
 .modal-close-btn {
