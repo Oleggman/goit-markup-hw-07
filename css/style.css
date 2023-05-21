@@ -300,7 +300,6 @@ img {
 
 .hero {
   max-width: 428px;
-  height: 432px;
   margin-left: auto;
   margin-right: auto;
   padding: 112px 0;
@@ -560,6 +559,12 @@ img {
   |============================
 */
 
+@media screen and (min-width: 768px) and (max-width: 1157px) {
+  .customers .container {
+    padding: 0 108px;
+  }
+}
+
 .customers-list {
   display: flex;
   justify-content: center;
@@ -762,6 +767,9 @@ img {
   position: fixed;
   top: 0;
   left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
   width: 100vw;
 
@@ -773,12 +781,10 @@ img {
 .modal {
   position: absolute;
   min-height: 576px;
-  width: 392px;
-  top: 50%;
-  left: 50%;
+  max-width: 392px;
   padding: 72px 16px 24px;
 
-  transform: translate(-50%, -50%) scale(1);
+  transform: scale(1);
 
   background-color: var(--modal-bg-color);
 
@@ -789,7 +795,7 @@ img {
 
 @media screen and (min-width: 768px) {
   .modal {
-    width: 408px;
+    max-width: 408px;
     padding-left: 24px;
     padding-right: 24px;
   }
@@ -1193,6 +1199,10 @@ img {
   line-height: 1.11;
 }
 
+.mobile-menu .link.active {
+  color: var(--main-color-hover);
+}
+
 .mobile-menu-item:not(:last-child) {
   margin-bottom: 40px;
 }
@@ -1202,6 +1212,11 @@ img {
   display: flex;
   flex-direction: column;
   gap: 48px;
+}
+
+.mobile-menu-address .socials {
+  justify-content: start;
+  gap: 56px;
 }
 
 .contacts-item {
