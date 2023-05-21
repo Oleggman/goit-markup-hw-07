@@ -22,6 +22,14 @@
   <body>
     <header class="header">
       <div class="container">
+        <a class="site-logo mobile-logo link" href="./index.html">Web<span class="logo-span">Studio</span></a>
+
+        <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg class="burger-menu-icon" width="32" height="22">
+            <use href="./images/icons.svg#burger-menu"></use>
+          </svg>
+        </button>
+
         <nav class="main-nav">
           <a class="site-logo link" href="./index.html">Web<span class="logo-span">Studio</span></a>
           <ul class="nav-list list">
@@ -111,13 +119,22 @@
           <h2 class="section-title">What are we doing</h2>
           <ul class="list">
             <li class="work-item">
-              <img src="./images/works/What-we-are-doing-1.jpg" alt="Work 1" width="360" height="300" />
+              <img
+                srcset="./images/works/work-1.jpg 1x, ./images/works/work-1@2x.jpg 2x"
+                src="./images/works/work-1.jpg"
+                alt="Work 1" />
             </li>
             <li class="work-item">
-              <img src="./images/works/What-we-are-doing-2.jpg" alt="Work 2" width="360" height="300" />
+              <img
+                srcset="./images/works/work-2.jpg 1x, ./images/works/work-2@2x.jpg 2x"
+                src="./images/works/work-2.jpg"
+                alt="Work 2" />
             </li>
             <li class="work-item">
-              <img src="./images/works/What-we-are-doing-3.jpg" alt="Work 3" width="360" height="300" />
+              <img
+                srcset="./images/works/work-3.jpg 1x, ./images/works/work-3@2x.jpg 2x"
+                src="./images/works/work-3.jpg"
+                alt="Work 3" />
             </li>
           </ul>
         </div>
@@ -128,7 +145,10 @@
           <h2 class="section-title">Our Team</h2>
           <ul class="list">
             <li class="team-card">
-              <img src="./images/team/worker1.jpg" alt="Product Designer Mark Guerrero" width="264" height="260" />
+              <img
+                srcset="./images/team/team-1.jpg 1x, ./images/team/team-1@2x.jpg 2x"
+                src="./images/team/team-1.jpg"
+                alt="Product Designer Mark Guerrero" />
               <div class="worker-desc">
                 <h3 class="item-title">Mark Guerrero</h3>
                 <p class="description">Product Designer</p>
@@ -185,7 +205,10 @@
               </div>
             </li>
             <li class="team-card">
-              <img src="./images/team/worker2.jpg" alt="Frontend Developer Tom Ford" width="264" height="260" />
+              <img
+                srcset="./images/team/team-2.jpg 1x, ./images/team/team-2@2x.jpg 2x"
+                src="./images/team/team-2.jpg"
+                alt="Frontend Developer Tom Ford" />
               <div class="worker-desc">
                 <h3 class="item-title">Tom Ford</h3>
                 <p class="description">Frontend Developer</p>
@@ -242,7 +265,10 @@
               </div>
             </li>
             <li class="team-card">
-              <img src="./images/team/worker3.jpg" alt="Marketer Camila Garcia" width="264" height="260" />
+              <img
+                srcset="./images/team/team-3.jpg 1x, ./images/team/team-3@2x.jpg 2x"
+                src="./images/team/team-3.jpg"
+                alt="Marketer Camila Garcia" />
               <div class="worker-desc">
                 <h3 class="item-title">Camila Garcia</h3>
                 <p class="description">Marketing</p>
@@ -299,7 +325,10 @@
               </div>
             </li>
             <li class="team-card">
-              <img src="./images/team/worker4.jpg" alt="UI Designer Daniel Wilson" width="264" height="260" />
+              <img
+                srcset="./images/team/team-4.jpg 1x, ./images/team/team-4@2x.jpg 2x"
+                src="./images/team/team-4.jpg"
+                alt="UI Designer Daniel Wilson" />
               <div class="worker-desc">
                 <h3 class="item-title">Daniel Wilson</h3>
                 <p class="description">UI Designer</p>
@@ -528,6 +557,68 @@
         </form>
       </div>
     </div>
+
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu modal-close-btn">
+        <svg class="modal-close-icon" width="8" height="8">
+          <use href="./images/icons.svg#close"></use>
+        </svg>
+      </button>
+
+      <ul class="mobile-menu">
+        <li class="mobile-menu-item"><a href="#" class="link">Studio</a></li>
+        <li class="mobile-menu-item"><a href="./portfolio.html" class="link">Portfolio</a></li>
+        <li class="mobile-menu-item"><a href="" class="link">Contacts</a></li>
+      </ul>
+
+      <div class="mobile-menu-address">
+        <ul class="contacts list">
+          <li class="contacts-item">
+            <a class="link" href="tel:+110001111111">+11 (000) 111-11-11</a>
+          </li>
+          <li class="contacts-item">
+            <a class="link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+          </li>
+        </ul>
+        <ul class="socials list">
+          <li class="socials-item">
+            <a href="" class="socials-link link" target="_blank" rel="noopener noreferrer" aria-label="instagram icon">
+              <svg class="socials-icon" width="16" height="16">
+                <use href="./images/icons.svg#instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="socials-item">
+            <a href="" class="socials-link link" target="_blank" rel="noopener noreferrer" aria-label="twitter icon">
+              <svg class="socials-icon" width="16" height="16">
+                <use href="./images/icons.svg#twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="socials-item">
+            <a href="" class="socials-link link" target="_blank" rel="noopener noreferrer" aria-label="facebook icon">
+              <svg class="socials-icon" width="16" height="16">
+                <use href="./images/icons.svg#facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="socials-item">
+            <a href="" class="socials-link link" target="_blank" rel="noopener noreferrer" aria-label="linkedin icon">
+              <svg class="socials-icon" width="16" height="16">
+                <use href="./images/icons.svg#linkedin"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"></script>
+    <script defer src="js/mobile-menu.js"></script>
 
     <script src="./js/modal.js"></script>
   </body>
